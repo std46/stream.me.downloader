@@ -55,10 +55,9 @@ public class Downloader {
 
                         FileUtils.copyURLToFile(new URL(mp4Source),
                                 new File(download.getDestination(),
-                                        download.getTitle()
-                                                .replace('\\', '_')
-                                                .replace('/', '_') + ".mp4"));
-                        
+                                        title
+                                                .replaceAll("[^a-zA-Z0-9\\._]+", "_") + ".mp4"));
+
                     } catch (IOException e) {
                         e.printStackTrace();
                         changeStatus(Status.FAILURE, download);
