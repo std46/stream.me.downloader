@@ -11,12 +11,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class MainFrame extends JFrame {
 
     public static void main(String[] args) {
-//        try {
-//            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-//        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-//            e.printStackTrace();
-//        }
-        //if using mac, we don't won't th menubar on the window
+        //if using mac, we don't won't the menubar on the window
         System.setProperty("apple.laf.useScreenMenuBar", "true");
         SwingUtilities.invokeLater(MainFrame::new);
     }
